@@ -23,7 +23,8 @@ const userSchema = new Schema({
     isAdmin: {
         type: Boolean,
         required: true,
-    }
+    },
+    wishlist:[{type: Schema.Types.ObjectId, ref:'Product'}]
 });
 
 module.exports = mongoose.model('User', userSchema);
